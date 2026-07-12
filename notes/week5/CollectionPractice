@@ -13,7 +13,6 @@ public class CollectionPractice {
         for (String city : cityList) {
             System.out.println(city);
         }
-
         // 2. 创建 Set<Integer>，添加10个数字并观察重复元素是否被加入
         Set<Integer> numberSet = new HashSet<>();
         // 故意加入重复数字
@@ -23,7 +22,6 @@ public class CollectionPractice {
             System.out.printf("尝试添加数字 %d，是否成功：%b%n", num, added);
         }
         System.out.println("Set 最终元素：" + numberSet);
-
         // 3. 创建 Map<String, Integer> 存储“姓名-年龄”，遍历输出
         Map<String, Integer> ageMap = new HashMap<>();
         ageMap.put("张三", 20);
