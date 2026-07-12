@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class CollectionPractice {
+    public static void main(String[] args) {
+        // 1. 创建 List<String>，添加5个城市名
+        List<String> cityList = new ArrayList<>();
+        cityList.add("北京");
+        cityList.add("上海");
+        cityList.add("广州");
+        cityList.add("深圳");
+        cityList.add("杭州");
+        System.out.println("城市列表：");
+        for (String city : cityList) {
+            System.out.println(city);
+        }
+
+        // 2. 创建 Set<Integer>，添加10个数字并观察重复元素是否被加入
+        Set<Integer> numberSet = new HashSet<>();
+        // 故意加入重复数字
+        int[] numbers = {1, 2, 3, 4, 5, 3, 6, 7, 2, 8};
+        for (int num : numbers) {
+            boolean added = numberSet.add(num);
+            System.out.printf("尝试添加数字 %d，是否成功：%b%n", num, added);
+        }
+        System.out.println("Set 最终元素：" + numberSet);
+
+        // 3. 创建 Map<String, Integer> 存储“姓名-年龄”，遍历输出
+        Map<String, Integer> ageMap = new HashMap<>();
+        ageMap.put("张三", 20);
+        ageMap.put("李四", 21);
+        ageMap.put("王五", 19);
+        ageMap.put("赵六", 22);
+        System.out.println("\n姓名-年龄信息：");
+        // 方式1：entrySet 遍历
+        for (Map.Entry<String, Integer> entry : ageMap.entrySet()) {
+            System.out.println("姓名：" + entry.getKey() + "，年龄：" + entry.getValue());
+        }
+    }
+}
